@@ -1,0 +1,47 @@
+<h1>Create posts</h1>
+<form action="/admin/posts/create" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Enter title" required>
+    </div>
+
+  <div class="form-group">
+        <label for="file">File Upload</label>
+        <input type="file" class="form-control" name="file" id="file">
+    </div>
+      <div class="form-group">
+        <label for="title">Category</label>
+        <select name="category" id="status" class="form-control">
+            {{#each categories}}
+                <option value="{{id}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+      <div class="form-group">
+        <label for="title">Status</label>
+        <select name="status" id="status" class="form-control">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+            <option value="draft">Draft</option>
+        </select>
+    </div>
+    
+    <div class="form-check px-2">
+        <label for="allowComment">
+        <input name="allowComments" class="form-check-input" type="checkbox" id="allowComments">
+        Allow Comments
+       </label> 
+    </div>
+
+     <div class="form-group">
+        <label for="body">Description</label>
+        <textarea required  class="form-control" name="body" id="body" cols="30" rows="10" placeholder="Enter Description"></textarea>
+    </div>
+    
+    
+
+    <button class="btn btn-primary" type="submit">
+        Create
+    </button>
+</form>

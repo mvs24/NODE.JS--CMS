@@ -1,0 +1,27 @@
+<h1>Comments</h1>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Owner</th>
+      <th>Status</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each comments}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{user.firstName}}</td>>
+      <td>{{generateTime date 'MMMM Do YYYY'}}</td>
+    <td>
+      <form action="/admin/comments/?_method=DELETE" method="post">
+   <input type="hidden" name="id" value="{{ post.id}}">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+    </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

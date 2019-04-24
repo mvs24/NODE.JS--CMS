@@ -1,0 +1,29 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marius Vasili",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "chart.js": "^2.8.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "faker": "^4.1.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.24.0",
+    "mongodb-stitch-browser-sdk": "^4.3.2",
+    "mongoose": "^5.4.21",
+    "mongoose-url-slugs": "^1.0.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
